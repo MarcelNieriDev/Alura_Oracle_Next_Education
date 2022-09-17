@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'lightgray';
+        pincel.fillRect(0, 0, 600, 400);
+
+        var raio = 10;
+        var velocidade = 1000;
+        var x = Math.round(Math.random() * 100);
+        var y = Math.round(Math.random() * 100);
+        
+        function desenhaCirculo(x, y, raio, cor) {
+
+            pincel.fillStyle = cor;
+            pincel.beginPath();
+            pincel.arc(x, y, raio, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+
+        function limpaTela() {
+        pincel.clearRect(0, 0, 600, 400);
+        }
+
+          
+
+        function atualizaTela() {
+
+          limpaTela();
+          desenhaCirculo(x,y,raio + 20,'red');
+          desenhaCirculo(x,y,raio + 10,'white');
+          desenhaCirculo(x,y,raio,'red');
+        
+        x = Math.round(Math.random() * 600);
+        y = Math.round(Math.random() * 400);
+        
+        aceleraAlvo();
+        
+        if (velocidade <= 0) {
+          
+          velocidade = velocidade + 200;
+          
+          }
+        
+        }
+        
+      
+        
+        function aceleraAlvo() {
+          
+          velocidade = (velocidade) - 50;
+          
+        }
+        
+    function acertaAlvo(evento) {
+      
+      var alvoX = evento.pageX - tela.offsetLeft;
+      var alvoY = evento.pageY - tela.offsetTop;
+      
+      if ((x > alvoX - raio) && 
+        (x < alvoX + raio) &&
+        (y > alvoY - raio) &&
+        (y < alvoY + raio)) {
+      
+        alert('Parabens ! Bem no alvo !');
+      }
+    }
+        
+
+        tela.onclick = acertaAlvo;
+        setInterval(aceleraAlvo,500);
+      
+        setInterval(atualizaTela, velocidade);
+        
+        
+    
+
+    console.log(velocidade)
+    </script>

@@ -1,6 +1,6 @@
 # Alura Oracle Next Education
 Programa oferecido pela Oracle para a capacitação de profissionais em Desenvolvedores Full Stack.</br>
-Neste repositorio estão os exercicios e tarefas desenvolvdas durante o aprendizado.
+Neste repositorio estão os exercicios e tarefas desenvolvidas durante o aprendizado.
 
 
 ### JAVASCRIPT | HTML | CSS
@@ -10,9 +10,10 @@ Neste repositorio estão os exercicios e tarefas desenvolvdas durante o aprendiz
 <img align="center" alt="html5" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
 </div></br>
 
-- Acentando o Alvo.<br>
-<p color: orange;>
+- Acentando o Alvo {</br>
+<p>
 
-Desenvolvimento de um jogo em JS utilizando o canvas com os métodos document.querySelector e getContext ('2d'). Apesar de ser uma criação simples dos usuários o aprendizado de criação lógica dentro dos usuários ocorreu o posicionamento randômico das funções junto com o funcionamento de acerto através dos valores identificados pelo eventopage | ao clicar | setInterval. Bem divertido!
+Desenvolvimento de um jogo em JS utilizando o canvas com os métodos document.querySelector e getContext ('2d'). Apesar de ser uma escrita simples, a lógica envolvida utilizando o posicionamento randômico, a criação de funções junto com a mecânica de acerto através dos valores identificados pelo eventopage | onclick | setInterval. Bem divertido !
 
 </p>
+}
